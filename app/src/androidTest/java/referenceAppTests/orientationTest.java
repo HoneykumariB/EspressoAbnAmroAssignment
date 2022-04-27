@@ -25,7 +25,7 @@ public class orientationTest extends referenceMainPage {
         assertTrue("Heading display status:portrait", verifyHeadingText());
         assertTrue("Main body display status:portrait", verifyBodyStatus());
         assertTrue("Mail ICON display status :portrait", verifyMailStatus());
-        NativeScreenshot.capture("PostUI_OrientationStatus");
+    //    NativeScreenshot.capture("PostUI_OrientationStatus");
 
     }
 }

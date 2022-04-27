@@ -33,7 +33,7 @@ public class mailIconValidation extends referenceMainPage {
             assertTrue("Popup text verified:", popupTextVerify("ABN AMRO APP"));
             wait(5000);
             assertTrue("popup field collapsed", noPopupField());
-            NativeScreenshot.capture("PostMailStatus");
+     //       NativeScreenshot.capture("PostMailStatus");
         }
 
     }

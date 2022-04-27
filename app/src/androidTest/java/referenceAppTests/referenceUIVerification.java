@@ -32,7 +32,7 @@ public class referenceUIVerification extends referenceMainPage {
     assertTrue("Mail ICON display status :",verifyMailStatus());
     assertTrue("Hello world has Background status :",bodyBackGround());
     assertTrue("ToolBar backGround Color is Green :",toolbarColor());
-    NativeScreenshot.capture("PostUIValidationStatus");
+  //  NativeScreenshot.capture("PostUIValidationStatus");
 }
 
 }

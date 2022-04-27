@@ -31,7 +31,7 @@ public class settingValidation extends referenceMainPage {
         selectSetting();
         tapHelloWorld();
         assertTrue("Setting field collapsed",noSettingField());
-        NativeScreenshot.capture("PostSettingStatus");
+    //    NativeScreenshot.capture("PostSettingStatus");
 
     }
 
