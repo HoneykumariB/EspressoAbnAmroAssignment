@@ -5,24 +5,39 @@ This Repo provides the solution of Abn Amro assignment on Reference app
 --
 
 In order to complete this assignment , I used
+
 ·	macOS High Sierra
+
 ·	Android Studio Bumblebee
+
 ·	Android SDK v29,30 
+
 ·	Android Emulator & Real device
+
 ·	GitHub account
+
 ·	JDK 11
+
 
 **Tools:**
 --
 
 which help in achieving espresso automation for android Instrumentation test
+
 ·	UiAutomator : locator strategy
+
 ·	Android studio 
+
 ·	Gradle
+
 ·	junit
+
 ·	Vysor: Real device screen mirroring
+
 ·	ADB
+
 ·	GitHub CI
+
 
 **Scenario covered :**
 --
