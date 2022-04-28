@@ -1,18 +1,98 @@
-# Test assignment
+# Test assignment Solution 
+This Repo provides the solution of Abn Amro assignment on Reference app
 
-We are looking for Automation Engineers that have the mindset "only the sky is the limit" and "automation doesn't stop at testing, it's just a beginning!" ;)
+**Pre-requisites:**
+--
 
-The purpose of this test assignment is to assess the applicant's automation skills, allowing him/her to show the best they can do and how fast they can learn.
-It is an open assignment. There is no the right answer and there is no end goal other than proving yourself. Surprise us!
+In order to complete this assignment , I used
+·	macOS High Sierra
+·	Android Studio Bumblebee
+·	Android SDK v29,30 
+·	Android Emulator & Real device
+·	GitHub account
+·	JDK 11
 
-Make sure that you give detailed comments or descriptions of your tests.
-When the assignment is complete, please push your solution to Github(Gitlab) and send us the link to hr.grid.adi@nl.abnamro.com, dana.finies@nl.abnamro.com, guido.vermeulen@nl.abnamro.com
-If you have any questions, please contact Emilie Kuntze at <emilie.kuntze@nl.abnamro.com>.
+**Tools:**
+--
 
-Good luck.
+which help in achieving espresso automation for android Instrumentation test
+·	UiAutomator : locator strategy
+·	Android studio 
+·	Gradle
+·	junit
+·	Vysor: Real device screen mirroring
+·	ADB
+·	GitHub CI
 
-PS. We don't expect you to spend weeks (and sleepless nights) on doing it. Lets see how far you can get in 6-10 hours. We want to see how you approach and solve problems.
+**Scenario covered :**
+--
 
-PSPS. Please use mobile native tools. (Tests written on Java are accepted too)
+·	Validate Reference app UI elements
+
+·	Validate More Options/Setting functionality
+
+·	Validate Mail icon functionality
+
+·	Validate the app activity by changing screen orientation(portrait/landscape)
+
+·	Validate tab color (UI scenario) 
+
+**Framework Structure :**
+--
+
+<img width="295" alt="image" src="https://user-images.githubusercontent.com/82476790/165700885-b6c71f57-4af5-4ca9-ba1b-1d66ab2df262.png">
+
+·	referenceAppTests : comprises baseClass & other test classes
+
+·	referenceAppPages: comprises page element 
+
+·	CustomMatchers: comprises custom matcher for click operation & screen orientation
+
+·	Utilities: comprises screenshot class & tags interfaces
+
+·	Runner: Comprises runner class
+
+
+###### Running Espresso Testing**
+--
+
+**Locally**  : 
+
+1. Git clone and open the project in android studio and execute the espresso test using instrumentationRunner class in runner package inside androidTest .
+                                                Or
+   Git clone  & open terminal/cmd and navigate till project path and execute below command
+
+`
+adb shell am instrument -w -m -e clearPackageData true   -e debug false -e class 'runner.instrumentationRunner' com.abnamro.apps.referenceandroid.test/androidx.test.runner.AndroidJUnitRunner`
+
+
+2. Executing locally build & test using gradle command in terminal/cmd  
+
+    -Command will execute all test in espresso android test
+   ` ./gradlew connectedDebugAndroidTest`
+   
+   -Test can be executed by using tags (@Regression or @Smoke)
+`     ./gradlew connectedDebugAndroidTest -Ptags="Regression" `
+             or 
+             
+      `./gradlew connectedDebugAndroidTest -Ptags="Smoke"`
+    
+   
+**Remotely** : Using GitHub CI
+  -Push the code or create the pull request then GitHUb CI will start executing jobs on api level 29 & 26 currently on android emulator (created android CI yml file)
+  
+  
+  
+  **Reporting** : if executed locally HTML report can be extracted from android studio 
+  
+  **Screenshot**: Screenshot will get saved in device downloads folder after execution ( Screenshot code is commented as causing exception on GitHUB CI                      but worked fine locally 
+  
+  
+ ** 
+  Note: Espresso framework can be extended with firebase, device firms such as browserstack or sauce lab **
+
+
+
+
 
 
