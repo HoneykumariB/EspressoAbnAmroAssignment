@@ -16,9 +16,7 @@ In order to complete this assignment , I used
 
 ·	GitHub account
 
-·	JDK 11
-
-
+·	JDK 11 
 **Tools:**
 --
 
@@ -105,10 +103,4 @@ adb shell am instrument -w -m -e clearPackageData true   -e debug false -e clas
   
  ** 
   Note: Espresso framework can be extended with firebase, device firms such as browserstack or sauce lab **
-
-
-
-
-
-
 
